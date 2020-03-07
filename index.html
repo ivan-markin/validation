@@ -20,18 +20,18 @@
                 <h3>Форма регистрации</h3>
                 <fieldset class="form__fieldset">
                     <div class="form__field">
-                        <input class="form__input" type="text" name="name" pattern="" placeholder="Имя" required />
+                        <input class="form__input" type="text" name="name" placeholder="Имя" pattern="[А-ЯЁ][А-ЯЁа-яё\-]+" title="Имя должно быть написано кириллицей без пробелов и начинаться с заглавной буквы" minlength="2" maxlength="20" required />
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="email" name="email" pattern="" placeholder="E-Mail" required />
+                        <input class="form__input" type="email" name="email" pattern="[\w\-\.]+@\w+\.\w+" placeholder="E-Mail" required />
                         <span class="form__error">e-mail в формате: students-yandex@yandex.ru</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="tel" name="tel" placeholder="Телефон" pattern="" minlength="18" maxlength="18"  required/>
+                        <input class="form__input" type="tel" name="tel" placeholder="Телефон" pattern="\+?[\d\s\-\(\)]+" minlength="11" maxlength="18"  required/>
                         <span class="form__error">телефон в формате: +7 (900) 000-00-00</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="url" name="url" pattern="" placeholder="Ваш сайт" required/>
+                        <input class="form__input" type="url" name="url" pattern="^(https?)\:\/\/(www\.)?[\w\.]+(\:\d{2,5})?[\w\/]+\#?" placeholder="Ваш сайт" required/>
                         <span class="form__error">URL в формате: http://mysite.ru</span>
                     </div>
                     <button class="form__button" type="submit">Отправить</button>
